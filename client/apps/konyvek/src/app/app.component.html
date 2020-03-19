@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Azon</th>
+    <th>szerzo</th>
+    <th>cim</th>
+    <th>kiadasev</th>
+    <th>mennyiseg</th>
+    <th>ar</th>
+    <th>kolcsonozheto</th>
+  </tr>
+  <tr *ngFor="let konyv of (konyvek | async)">
+    <td>{{konyv.azon}}</td>
+    <td>{{konyv.szerzo}}</td>
+    <td>{{konyv.cim}}</td>
+    <td>{{konyv.kiadasev}}</td>
+    <td>{{konyv.mennyiseg}}</td>
+    <td>{{konyv.ar}}</td>
+    <td>{{konyv.kolcsonozheto}}</td>
+  </tr>
+</table>
