@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { KonyvlistaComponent } from './konyvlista/konyvlista.component';
+import { UjKonyvComponent } from './uj-konyv/uj-konyv.component';
 
 @NgModule({
-  declarations: [AppComponent, KonyvlistaComponent],
+  declarations: [AppComponent, KonyvlistaComponent, UjKonyvComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
