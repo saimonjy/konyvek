@@ -17,5 +17,6 @@ export class AppComponent {
   konyvek = this.http.get('http://192.168.64.2/blabla/server/konyvlista.php');
   
   constructor(private http:HttpClient) {
+    console.log('hello');
   }
 }
