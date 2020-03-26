@@ -1,1 +1,45 @@
-<p>uj-konyv works!</p>
+<form [formGroup]="konyvForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Azonosito
+      <input type="text" formControlName="azon" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Szerzo
+      <input type="text" formControlName="szerzo" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Cim
+      <input type="text" formControlName="cim" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Kiadasi ev
+      <input type="text" formControlName="kiadasev" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Mennyiseg
+      <input type="text" formControlName="mennyiseg" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Ar
+      <input type="text" formControlName="ar" />
+    </label>
+  </div>
+  <div>
+    <label>
+      Kolcsonozheto-e
+      <input type="checkbox" formControlName="kolcsonozheto" />
+    </label>
+  </div>
+  <div><input type="submit" value="Mentes"></div>
+</form>
