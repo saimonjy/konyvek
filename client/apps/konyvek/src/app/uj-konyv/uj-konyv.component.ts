@@ -22,7 +22,6 @@ export class UjKonyvComponent {
   constructor(private http: HttpClient) { }
 
   onSubmit() {
-    console.log(this.konyvForm.value);
     this.http
       .post<any>('http://192.168.64.2/blabla/server/ujkonyv.php', this.konyvForm.value)
       .subscribe(console.log);

@@ -1,5 +1,6 @@
 <?php
-require('includes/mysql_list.php');
+require('includes/adatbazis.php');
 $query = 'SELECT * FROM javakonyvek';
-echo getListOfTable($query);
+$db = new AdatBazis();
+echo $db->lekerdezes($query);
 ?>
