@@ -19,7 +19,7 @@ class AdatBazis {
         $this->kapcsolat->close();
     }
 
-    function lekerdezes($query) {
+    function lista($query) {
         global $mysqlconfig;
         if ($sqlresult = $this->kapcsolat->query($query)) {
             $result = [];
@@ -27,6 +27,28 @@ class AdatBazis {
                 if ($row) {
                     $result[] = $row;
                 }
+            }
+            $sqlresult->close();
+        } else {
+            $result = ['error' => [
+                'query' => $query,
+                'message' => $this->kapcsolat->error,
+            ]];    
+        }
+        return $this->json($result);
+    }
+
+    function lekerdezes($query) {
+        global $mysqlconfig;
+        if ($sqlresult = $this->kapcsolat->query($query)) {
+            $row = $sqlresult->fetch_assoc();
+            if ($row) {
+                $result = $row;
+            } else {
+                $result = ['error' => [
+                    'query' => $query,
+                    'message' => 'Nincs ilyen azonositoju konyv az adatabzisban.',
+                ]];    
             }
             $sqlresult->close();
         } else {
