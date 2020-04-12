@@ -1,0 +1,31 @@
+section {
+    position: relative;
+    background-image: url('/blabla/client/dist/apps/konyvek//assets/borito.jpg');
+    background-repeat: no-repeat;
+
+    color: white;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.szerzo {
+    font-size: 2em;
+    font-weight: bold;
+    left: 90px;
+    max-width: 310px;
+    position: absolute;
+    top: 15px;
+}
+
+.cim {
+    position: absolute;
+    top: 120px;
+    left: 90px;
+}
+
+.azon {
+    position: absolute;
+    bottom: 15px;
+    right: 100px;
+}

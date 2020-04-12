@@ -7,9 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { KonyvlistaComponent } from './konyvlista/konyvlista.component';
 import { UjKonyvComponent } from './uj-konyv/uj-konyv.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { KonyvComponent } from './konyv/konyv.component';
 
 @NgModule({
-  declarations: [AppComponent, KonyvlistaComponent, UjKonyvComponent],
+  declarations: [AppComponent, KonyvlistaComponent, UjKonyvComponent, KonyvComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

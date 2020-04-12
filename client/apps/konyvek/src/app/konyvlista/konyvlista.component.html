@@ -9,7 +9,7 @@
       <th>kolcsonozheto</th>
     </tr>
     <tr *ngFor="let konyv of (konyvek | async)">
-      <td>{{konyv.azon}}</td>
+      <td><a [routerLink]="['/konyv', konyv.azon]">{{konyv.azon}}</a></td>
       <td>{{konyv.szerzo}}</td>
       <td>{{konyv.cim}}</td>
       <td>{{konyv.kiadasev}}</td>
